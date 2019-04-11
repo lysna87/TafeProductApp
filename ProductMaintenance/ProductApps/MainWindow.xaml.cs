@@ -23,6 +23,8 @@ namespace ProductApps
         Product cProduct;
         decimal TotalCharge;
         decimal totalChargeAfterWrap;
+        decimal GST = .10m;
+        decimal totalChargeAfterGST;
 
         public MainWindow()
         {
@@ -41,6 +43,9 @@ namespace ProductApps
                 totalChargeTextBox.Text = Convert.ToString(TotalCharge);
                 totalChargeAfterWrap = TotalCharge + 5;
                 arfterWrapChargeTextBox.Text = Convert.ToString(totalChargeAfterWrap);
+                totalChargeAfterGST = (totalChargeAfterWrap * GST) + totalChargeAfterWrap;
+                afterGSTchargeTextBox.Text = Convert.ToString(totalChargeAfterGST);
+
             }
             catch (FormatException)
             {
