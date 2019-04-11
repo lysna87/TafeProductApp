@@ -22,6 +22,7 @@ namespace ProductApps
     {
         Product cProduct;
         decimal TotalCharge;
+        decimal totalChargeAfterWrap;
 
         public MainWindow()
         {
@@ -38,6 +39,8 @@ namespace ProductApps
                 //added code by HL
                 TotalCharge = cProduct.TotalPayment + 25;
                 totalChargeTextBox.Text = Convert.ToString(TotalCharge);
+                totalChargeAfterWrap = TotalCharge + 5;
+                arfterWrapChargeTextBox.Text = Convert.ToString(totalChargeAfterWrap);
             }
             catch (FormatException)
             {
